@@ -1,0 +1,7 @@
+{
+  "name": "vendor_library",
+  "content": {
+    "./components/util/util.js": 1,
+    "./components/util/util.css": 2
+  }
+}
