@@ -161,7 +161,7 @@ function webpackConfig(args) {
                     '{joyowyb}': ROOT_PATH + '/joyowyb',
                 },
                 // modulesDirectories: [ 'lib', 'modules', 'node_modules'],
-                extensions: ['', '.js', '.less', '.gif', '.html', '.png', '.webp', '.jpg']
+                extensions: ['', '.js', '.jsx',  '.css', '.json', '.less', '.gif', '.html', '.png', '.webp', '.jpg']
             },
             externals: {
                 // require("jquery") 是引用自外部模块的

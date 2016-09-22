@@ -1,0 +1,80 @@
+'use strict';
+import React, { Component } from 'react';
+import Tab from './Tab';
+import TabCon from './TabCon';
+import classSet from '../util/classSet';
+import {
+    parseAddressName
+} from './util/util';
+
+class PostionContainer extends Component {
+    constructor(props) {
+        super(props);
+        this.displayName = 'PostionContainer';
+
+        // let {index, valIndex, params, selectVal, selectName} = this.props;
+        // let l = selectVal.length;
+
+
+        /* 初始化默认state */
+        // let state = {
+        //     index: index,
+        //     valIndex: valIndex,
+        //     selectVal: l > 0 ? selectVal: [],
+        //     selectName: l > 0 ? selectName : []
+        // }
+        // this.state = state;
+    }
+    // componentWillReceiveProps(props) {
+    //     let {selectVal, selectName} = props;
+    //     let l = selectVal.length;
+
+    //     /* 更新state */
+    //     let state = {
+    //         index: l > 0 ? l - 1 : 0,
+    //         valIndex: l > 0 ? l -2 : 0,
+    //         selectVal: l > 0 ? selectVal: [],
+    //         selectName: l > 0 ? selectName : []
+    //     }
+
+    //     console.log('----------state------')
+    //     console.log(state)
+    //     this.setState(state);
+    // }
+    render() {
+        let state = this.state;
+
+        /* className */
+        let className = classSet({
+            'show' : this.props.show,
+            'postion-container': true
+        });
+
+
+        /* 定位坐标 */
+        let input = this.props.input;
+           
+        let style = {
+            left: input.left,
+            top: input.top,
+            width: input.width
+        }
+
+
+
+        return (
+            <div className={className} style={style}>
+                <Tab {...this.props} />
+                <TabCon {...this.props} />
+            </div>
+        )
+    }
+}
+
+
+
+export default PostionContainer;
+
+
+
+

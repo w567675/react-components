@@ -47,8 +47,8 @@ function webpackConfig(args) {
         vendor: [
             // 'react',
             // 'react-dom',
-            './components/util/util',
-            './components/util/util.css',
+            // './components/util/util',
+            // './components/util/util.css',
         ]
     }
 
