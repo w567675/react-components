@@ -58,7 +58,7 @@
     padding: 2px 4px;
     margin-left: 10px;
     cursor: pointer;
-    transition: all .2s;
+    transition: all .15s;
 } 
 .citys-wrap .city-item:hover,
 .citys-wrap .city-item.active  {

@@ -11,36 +11,11 @@ class PostionContainer extends Component {
     constructor(props) {
         super(props);
         this.displayName = 'PostionContainer';
-
-        // let {index, valIndex, params, selectVal, selectName} = this.props;
-        // let l = selectVal.length;
-
-
-        /* 初始化默认state */
-        // let state = {
-        //     index: index,
-        //     valIndex: valIndex,
-        //     selectVal: l > 0 ? selectVal: [],
-        //     selectName: l > 0 ? selectName : []
-        // }
-        // this.state = state;
     }
-    // componentWillReceiveProps(props) {
-    //     let {selectVal, selectName} = props;
-    //     let l = selectVal.length;
-
-    //     /* 更新state */
-    //     let state = {
-    //         index: l > 0 ? l - 1 : 0,
-    //         valIndex: l > 0 ? l -2 : 0,
-    //         selectVal: l > 0 ? selectVal: [],
-    //         selectName: l > 0 ? selectName : []
-    //     }
-
-    //     console.log('----------state------')
-    //     console.log(state)
-    //     this.setState(state);
-    // }
+    handClick(e) {
+        /* 阻止冒泡 */
+        e.nativeEvent.stopImmediatePropagation();
+    }
     render() {
         let state = this.state;
 
@@ -63,7 +38,7 @@ class PostionContainer extends Component {
 
 
         return (
-            <div className={className} style={style}>
+            <div className={className} style={style} onClick={this.handClick.bind(this)}>
                 <Tab {...this.props} />
                 <TabCon {...this.props} />
             </div>

@@ -50,9 +50,17 @@ class SelectCity extends Component {
         }
         this.state = state
     }
-    show() {
+    show(e) {
+        /* 阻止冒泡 */
+        e.nativeEvent.stopImmediatePropagation();
+
         this.setState({
             show : true
+        });
+    }
+    hide() {
+        this.setState({
+            show : false
         });
     }
     input() {
@@ -65,10 +73,24 @@ class SelectCity extends Component {
             width: params.width ? params.width : input.offsetWidth
         }
     }
-    componentDidMount () {
+
+    componentDidMount() {
         let input = this.input();
+
+        /* 挂载document的hide */
+        document.addEventListener('click', (e) => {
+            this.hide();
+        });
+
         this.setState({
             input: input
+        });
+    }
+    componentWillUnmount() {
+
+        /* 卸载document的hide */
+        document.removeEventListener('click', (e) => {
+            this.hide();
         });
     }
     changeState(params) {
@@ -89,6 +111,7 @@ class SelectCity extends Component {
         if(index >= max) {
             params.index = max - 1;
             params.valIndex = max - 2;
+            this.hide();
         }
         
         if(selectVal) {
@@ -118,6 +141,7 @@ class SelectCity extends Component {
         )
     }
 }
+
 
 
 let params = {

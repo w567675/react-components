@@ -24,7 +24,7 @@ class TabBtns extends Component {
     }
     render() {
         let { params, index } = this.props;
-        
+
 
         /**
          * [max 最大联动的层级]
@@ -59,7 +59,7 @@ class OneTabBtn extends Component {
         super(props);
         this.displayName = 'OneTabBtn';
     }
-    handleClick() {
+    handleClick(e) {
         let { dataKey, changeState } = this.props;
         changeState({
             index: dataKey,
