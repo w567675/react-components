@@ -13,7 +13,7 @@ import {
 let addressMap = parseAddress(address);
 
 
-
+console.log(addressMap)
 class SelectCity extends Component {
     constructor(props) {
         super(props);
@@ -145,10 +145,8 @@ class SelectCity extends Component {
 
 
 let params = {
-    deepMap: [{name: '省', value: 2 },{name: '市', value: 13},{name: '区', value: 335},{name: '街道', value: 4091}],
-    deepMap: [{name: '省', value: 3 },{name: '市', value: 15},{name: '区', value: 409},{name: '街道', value: 4091}],
-    // deepMap: [{name: '省'},{name: '市'},{name: '区'},{name: '街道'}],
-    // selectVal: [3, 15, 409, 4091],
+    deepMap: [{name: '省', value: 31 },{name: '市', value: 383},{name: '区', value: 3234}],
+    // deepMap: [{name: '省'},{name: '市'},{name: '区'}],
     width: 450
 }
 
