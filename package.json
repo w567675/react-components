@@ -9,18 +9,7 @@
     "test": "gulp test --src components",
     "build": "gulp build --src components"
   },
-  "options": {
-    "alias": {
-      "$": "lib/jquery/1.11.1/jquery",
-      "$2": "lib/jquery/1.7.1/jquery",
-      "{ssms}": "modules/xm/ssms/dist/js",
-      "{hrms}": "modules/xm/hrms/dist/js",
-      "{member}": "modules/member/dist/js",
-      "{website}": "modules/website/dist/js",
-      "{cmd}": "lib/cmd-plugins",
-      "{mycmd}": "lib/my-cmd-plugins"
-    }
-  },
+  "options": {},
   "devDependencies": {
     "babel-core": "^6.9.1",
     "babel-loader": "^6.2.4",
@@ -33,6 +22,7 @@
     "bluebird": "^3.4.6",
     "colors": "^1.1.2",
     "css-loader": "^0.23.1",
+    "eslint-config-airbnb": "^12.0.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
     "glob": "^5.0.10",
@@ -54,8 +44,6 @@
     "json-loader": "^0.5.4",
     "lodash": "^3.9.3",
     "minimist": "^1.2.0",
-    "react": "^15.3.1",
-    "react-dom": "^15.3.1",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.1.5",
     "sass-loader": "3.0.0",
@@ -64,5 +52,11 @@
     "webpack": "latest",
     "webpack-dev-server": "^1.14.1",
     "xss": "^0.2.13"
+  },
+  "dependencies": {
+    "react": "^15.3.2",
+    "react-dom": "^15.3.1",
+    "react-redux": "^4.4.5",
+    "redux": "^3.6.0"
   }
 }

@@ -22,18 +22,5 @@
           ],
           "dest": "build/components/"
         }
-    },
-    "all": {
-      "clean": "build/",
-      "js": {
-      "src": "**/*.js",
-        "ignore": ["**/*.min.js, **/data/**/*.js"]
-      },
-      "img": {
-        "src": [
-          "**/*.{jpge,jpg,gif,png}"
-        ],
-        "dest": "build/"
-      }
     }
 }

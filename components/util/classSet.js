@@ -6,16 +6,19 @@
 
 
 export default (params) => {
-    if(typeof params !== 'object') {
+    if (typeof params !== 'object') {
         throw new Error('传入不是对象');
     }
 
     let classes = '';
 
-    for(let key in params) {
-        let val = params[key];
-        if(!!val) {
-            classes += `${key} `;
+    for (const key in params) {
+        if ({}.hasOwnProperty.call(params, key)) {
+            const val = params[key];
+            const flag = !!val;
+            if (flag) {
+                classes += `${key} `;
+            }
         }
     }
 

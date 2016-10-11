@@ -1,0 +1,15 @@
+{
+    "extends": "airbnb",
+    "plugins": [
+        "react"
+    ],
+    "globals": {
+        "$": true,
+        "document": true
+    },
+    "rules": {
+        "indent": ["error", 4],
+        "linebreak-style": 0,
+        "no-restricted-syntax": ["error", "FunctionExpression", "WithStatement"]
+    }
+}

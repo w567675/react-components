@@ -56,3 +56,7 @@ node_modules/
 
 #npm_debuglog
 npm-debug.log
+
+
+#vscode
+.vscode/
