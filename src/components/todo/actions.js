@@ -8,7 +8,7 @@ export const COMPLETE_TODO = 'COMPLETE_TODO';
  */
 
 export const VisibilityFilters = {
-    SHOW_ALL: 'SHOW_ALL',
+    SHOW_ALL: 'SHOW_ALL3333',
     SHOW_COMPLETED: 'SHOW_COMPLETED',
     SHOW_ACTVIVE: 'SHOW_ACTVIVE',
 };

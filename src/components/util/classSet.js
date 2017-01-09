@@ -23,4 +23,4 @@ export default (params) => {
     }
 
     return classes;
-}
+};
