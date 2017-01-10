@@ -12,10 +12,10 @@
     "dist": "dist",
     "port": 8181,
     "js": {
-      "src": "src/js/**/*.js"
+      "src": "src/**/*.{js,jsx,ts,tsx}"
     },
     "css": {
-      "src": "src/css/**/*.css"
+      "src": "src/**/*.css"
     }
   },
   "devDependencies": {

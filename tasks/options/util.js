@@ -56,7 +56,9 @@ const entry = (params) => {
             let keys = item.split('.');
             let value = [path.resolve(ROOTPATH, item)];
             keys.pop();
-            const key = keys.join('')
+            keys = keys[0].split('/');
+            keys.shift();
+            const key = keys.join('/');
             filesObj[key] = value;
         }
     });
@@ -71,7 +73,7 @@ const output = (params) => {
     return {
         path: BUILDPATH,
         filename: '[name].js',
-        library: 'wuyou', // string,
+        library: 'w567675', // string,
         libraryTarget: 'umd',
     };
 }
@@ -144,7 +146,7 @@ const rules = () => {
             loader: 'happypack/loader?id=jsx',
             exclude(path) {
                 /* 路径中含有 plugins 的就不去解析 */
-                return !!path.match(/\\plugins\\/);
+                return !!path.match(/\\node_modules\\/);
             },
         },
         {
@@ -188,7 +190,7 @@ const devServer = () => {
             'Access-Control-Allow-Origin': '*',
         },
         proxy: {
-            "/src/js/**/*.js": {
+            "/src/**/*.js": {
                 target: `http://${HOST}:${port}`,
                 pathRewrite: { "^/src": "" }
             }
