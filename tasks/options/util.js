@@ -79,6 +79,49 @@ const output = (params) => {
 }
 
 
+
+const rules = () => {
+    return [
+        {
+            test: /\.jsx?$/,
+            loader: 'happypack/loader?id=jsx',
+            exclude(path) {
+                /* 路径中含有 plugins 的就不去解析 */
+                return !!path.match(/\\node_modules\\/);
+            },
+        },
+        {
+            test: /\.tsx?$/,
+            loader: 'ts-loader',
+            exclude(path) {
+                /* 路径中含有 plugins 的就不去解析 */
+                return !!path.match(/\\node_modules\\/);
+            },
+        },
+        {
+            test: /.css$/,
+            loader: extractCSS.extract({
+                fallbackLoader: 'style-loader',
+                loader: 'css-loader',
+                // publicPath: '/a/css/' // Overrides output.publicPath
+            }),
+        },
+        // {
+        //     test: /\.(png|jpg)$/,
+        //     loader: 'url-loader',
+        //     query: {
+        //         limit: 1,
+        //         publicPath: '/',
+        //         name: 'images/[name].[hash].[ext]',
+        //     }
+        // },
+        {
+            test: /\.hbs$/,
+            loader: "handlebars-loader",
+        }
+    ]
+}
+
 /**
  * plugins
  * webpack的plugins属性
@@ -127,8 +170,17 @@ const plugins = () => {
     const jsx = new happypack({
         id: 'jsx',
         threads: 4,
-        loaders: [ 'babel-loader' ],
+        loaders: ['babel-loader'],
     });
+
+    const ts = JSON.stringify({
+        transpileOnly: true,
+    });
+    // const tsx = new happypack({
+    //     id: 'tsx',
+    //     threads: 4,
+    //     loaders: ['ts-loader?transpileOnly=true'],
+    // });
 
     plugins.push(extractCSS, definePlugin, jsx);
 
@@ -139,39 +191,7 @@ const plugins = () => {
 }
 
 
-const rules = () => {
-    return [
-        {
-            test: /\.jsx?$/,
-            loader: 'happypack/loader?id=jsx',
-            exclude(path) {
-                /* 路径中含有 plugins 的就不去解析 */
-                return !!path.match(/\\node_modules\\/);
-            },
-        },
-        {
-            test: /.css$/,
-            loader: extractCSS.extract({
-                fallbackLoader: 'style-loader',
-                loader: 'css-loader',
-                // publicPath: '/a/css/' // Overrides output.publicPath
-            }),
-        },
-        // {
-        //     test: /\.(png|jpg)$/,
-        //     loader: 'url-loader',
-        //     query: {
-        //         limit: 1,
-        //         publicPath: '/',
-        //         name: 'images/[name].[hash].[ext]',
-        //     }
-        // },
-        {
-            test: /\.hbs$/,
-            loader: "handlebars-loader",
-        }
-    ]
-}
+
 
 const devServer = () => {
     return {
@@ -198,6 +218,7 @@ const devServer = () => {
     }
 }
 
+const devtool = () => 'cheap-module-source-map';
 
 module.exports = {
     entry,
@@ -205,6 +226,7 @@ module.exports = {
     rules,
     plugins,
     devServer,
+    devtool,
 }
 
 

@@ -26,6 +26,7 @@ import {
     plugins /* @function */,
     rules /* @function */,
     devServer /* @function */,
+    devtool /* @function */, 
 } from './tasks/options/util';
 
 
@@ -38,11 +39,12 @@ export default {
         rules: rules(),
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.json', '.gif', '.html', '.png', '.webp', '.jpg', '.css'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.gif', '.html', '.png', '.webp', '.jpg', '.css'],
         // alias: {
         //     // 'jquery': ROOTPATH + 'js/jquery/jquery-1.8.0.js',
         // },
     },
+    devtool: devtool(),
     devServer: devServer(),
     plugins: plugins(),
 };
