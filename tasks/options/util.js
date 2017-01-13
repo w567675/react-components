@@ -11,6 +11,7 @@ import {
     BUILDPATH,
     HOST,
     port,
+    https,
 } from '../../config'
 
 /* 分离独立依赖的css文件 */
@@ -194,6 +195,7 @@ const plugins = () => {
 
 
 const devServer = () => {
+    let protocol = https ? 'https': 'http';
     return {
         contentBase: ROOTPATH,
         compress: true,
@@ -206,12 +208,13 @@ const devServer = () => {
             aggregateTimeout: 300,
             poll: true,
         },
+        https,
         headers: {
             'Access-Control-Allow-Origin': '*',
         },
         proxy: {
             "/src/**/*.js": {
-                target: `http://${HOST}:${port}`,
+                target: `${https}://${HOST}:${port}`,
                 pathRewrite: { "^/src": "" }
             }
         },

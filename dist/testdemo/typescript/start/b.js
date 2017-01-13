@@ -91,8 +91,8 @@ var b = (function () {
     };
     return b;
 }());
-exports.__esModule = true;
-exports["default"] = b;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = b;
 
 
 /***/ },

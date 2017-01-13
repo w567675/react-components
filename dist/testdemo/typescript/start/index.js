@@ -148,7 +148,7 @@ var createSquare = function (config) {
     console.log(config);
     var newSquare = {
         color: 111,
-        area: 100
+        area: 100,
     };
     if (config.color) {
         newSquare.color = Number(config.color);
@@ -165,10 +165,109 @@ myArray = { x: '1' };
 var myStr = myArray[1];
 var Animal = (function () {
     function Animal() {
-        this.name = '1';
     }
     return Animal;
 }());
+var Dog = (function (_super) {
+    __extends(Dog, _super);
+    function Dog() {
+        return _super.apply(this, arguments) || this;
+    }
+    return Dog;
+}(Animal));
+var NumberDictionnaryObj = {
+    x: 1,
+    length: 1,
+    name: 'xxx'
+};
+var NumberDictionnaryObj2 = NumberDictionnaryObj;
+NumberDictionnaryObj2['x'] = 1;
+var AnalogClock = (function () {
+    function AnalogClock(h, m) {
+    }
+    AnalogClock.prototype.tick = function () {
+        console.log('tick tock');
+    };
+    return AnalogClock;
+}());
+var createClock = function (ctor, hour, minute) {
+    return new ctor(hour, minute);
+};
+var analog = createClock(AnalogClock, 12, 17);
+var square = {};
+square.color = 'bule';
+var getCounter = function () {
+    var counter = (function (start) { });
+    counter.reset = function () { };
+    return counter;
+};
+var cc = getCounter();
+cc.reset();
+var Control = (function () {
+    function Control() {
+    }
+    return Control;
+}());
+var Button = (function (_super) {
+    __extends(Button, _super);
+    function Button() {
+        return _super.apply(this, arguments) || this;
+    }
+    Button.prototype.xx2 = function () {
+    };
+    return Button;
+}(Control));
+var Animal2 = (function () {
+    function Animal2(name) {
+        this.name = name;
+    }
+    Animal2.prototype.sayName = function () {
+        console.log(this.name);
+    };
+    return Animal2;
+}());
+var Horse = (function (_super) {
+    __extends(Horse, _super);
+    function Horse(name2) {
+        var _this = _super.call(this, name2) || this;
+        _this.name2 = name2;
+        return _this;
+    }
+    Object.defineProperty(Horse.prototype, "fullName", {
+        get: function () {
+            return this.name;
+        },
+        set: function (name) {
+            this.name = name + Horse.origin.x;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return Horse;
+}(Animal2));
+Horse.origin = { x: 0, y: 0 };
+var tom = new Horse('sss');
+tom.fullName = '1';
+tom.sayName();
+var Animal3 = (function () {
+    function Animal3() {
+    }
+    Animal3.prototype.makeSound = function () {
+        return 2222;
+    };
+    return Animal3;
+}());
+var Horse2 = (function () {
+    function Horse2() {
+    }
+    Horse2.prototype.makeSound = function () {
+        return 1111;
+    };
+    return Horse2;
+}());
+console.log(Horse2 === Animal3);
+var horse2 = Horse2;
+var ccccc = new horse2();
 
 
 /***/ },

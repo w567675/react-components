@@ -6,6 +6,8 @@
         "strictNullChecks": true,
         "removeComments": true,
         "preserveConstEnums": true,
+        "noImplicitThis": true,
+        "target": "es5",
         "allowSyntheticDefaultImports": true
     },
     "exclude": [

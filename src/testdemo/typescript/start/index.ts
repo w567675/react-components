@@ -178,8 +178,88 @@ interface Counter {
 
 
 const getCounter = (): Counter => {
+    let counter = ((start: number) => {}) as Counter ;
+    counter.reset = function () {};
+    return counter;
+}
+let cc = getCounter();
+cc.reset();
 
-    
 
-    
+class Control {
+    private state: any;
+}
+interface SelectableControl extends Control {
+    select(): void;
+}
+class Button extends Control {
+   xx2() {
+
+   }
+}
+
+class Animal2 {
+    protected constructor(protected name: string) {
+       
+    }
+    sayName() {
+        console.log(this.name);
+    }
+}
+class Horse extends Animal2 {
+    static origin = {x: 0, y: 0};
+    constructor(private name2: string) {
+        super(name2);
+    }
+    get fullName(): string {
+        return this.name;
+    }
+    set fullName(name: string) {
+        this.name = name + Horse.origin.x;
+    }
+}
+let tom: Horse = new Horse('sss');
+tom.fullName = '1';
+tom.sayName();
+
+class Animal3 {
+    makeSound(): number {
+        return 2222;
+    }
+}
+
+class Horse2 {
+    makeSound(): number {
+        return 1111;
+    }
+}
+
+
+
+let myAdd: (baseValue:number, increment:number) => number = function(x, y) {
+    return x + y;
+}
+
+
+interface Card {
+    suit: string;
+    card: number;
+}
+interface Deck {
+    suits: string[];
+    cards: number[];
+    createCardPicker(this: Deck): () => Card;
+}
+
+let deck: Deck = {
+    suits: ['hearts', 'spades', 'clubs', 'diamonds'],
+    cards: Array(52),
+    createCardPicker(this: Deck) {
+        return () => {
+            return {
+                suit: '1',
+                card: 1,
+            }
+        }
+    }
 }

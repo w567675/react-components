@@ -11,6 +11,7 @@
   "options": {
     "dist": "dist",
     "port": 8181,
+    "https": true,
     "js": {
       "src": "src/**/*.{js,jsx,ts,tsx}"
     },
