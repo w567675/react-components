@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["w567675"] = factory();
+		exports["overwatch"] = factory();
 	else
-		root["w567675"] = factory();
+		root["overwatch"] = factory();
 })(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -22461,7 +22461,8 @@ exports.default = PostionContainer;
 /* 254 */,
 /* 255 */,
 /* 256 */,
-/* 257 */
+/* 257 */,
+/* 258 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22668,7 +22669,6 @@ var params = {
 _reactDom2.default.render(_react2.default.createElement(SelectCity, { params: params }), document.getElementsByTagName('body')[0]);
 
 /***/ },
-/* 258 */,
 /* 259 */,
 /* 260 */,
 /* 261 */,
@@ -49052,7 +49052,7 @@ module.exports = [
 /* 301 */
 /***/ function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(257);
+module.exports = __webpack_require__(258);
 
 
 /***/ }

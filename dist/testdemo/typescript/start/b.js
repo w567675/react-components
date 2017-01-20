@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["w567675"] = factory();
+		exports["overwatch"] = factory();
 	else
-		root["w567675"] = factory();
+		root["overwatch"] = factory();
 })(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -78,7 +78,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ({
 
-/***/ 261:
+/***/ 229:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -100,7 +100,7 @@ exports.default = b;
 /***/ 316:
 /***/ function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(261);
+module.exports = __webpack_require__(229);
 
 
 /***/ }

@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["w567675"] = factory();
+		exports["overwatch"] = factory();
 	else
-		root["w567675"] = factory();
+		root["overwatch"] = factory();
 })(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -1484,7 +1484,7 @@ exports.default = rootReducer;
 
 /***/ },
 
-/***/ 246:
+/***/ 247:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1510,7 +1510,7 @@ var timer = exports.timer = typeof performance !== "undefined" && performance !=
 
 /***/ },
 
-/***/ 259:
+/***/ 260:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1986,7 +1986,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.printBuffer = printBuffer;
 
-var _helpers = __webpack_require__(246);
+var _helpers = __webpack_require__(247);
 
 var _diff = __webpack_require__(275);
 
@@ -2283,7 +2283,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _core = __webpack_require__(273);
 
-var _helpers = __webpack_require__(246);
+var _helpers = __webpack_require__(247);
 
 var _defaults = __webpack_require__(274);
 
@@ -2448,7 +2448,7 @@ module.exports = g;
 /***/ 313:
 /***/ function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(259);
+module.exports = __webpack_require__(260);
 
 
 /***/ },

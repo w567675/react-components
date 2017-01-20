@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["w567675"] = factory();
+		exports["overwatch"] = factory();
 	else
-		root["w567675"] = factory();
+		root["overwatch"] = factory();
 })(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -23153,7 +23153,7 @@ function warning(message) {
 /* 221 */
 /***/ function(module, exports, __webpack_require__) {
 
-var root = __webpack_require__(241);
+var root = __webpack_require__(242);
 
 /** Built-in value references. */
 var Symbol = root.Symbol;
@@ -23172,11 +23172,11 @@ module.exports = Symbol;
 exports.__esModule = true;
 exports.connect = exports.Provider = undefined;
 
-var _Provider = __webpack_require__(231);
+var _Provider = __webpack_require__(232);
 
 var _Provider2 = _interopRequireDefault(_Provider);
 
-var _connect = __webpack_require__(232);
+var _connect = __webpack_require__(233);
 
 var _connect2 = _interopRequireDefault(_connect);
 
@@ -23383,7 +23383,8 @@ exports.default = todoApp;
 
 /***/ },
 /* 228 */,
-/* 229 */
+/* 229 */,
+/* 230 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23440,7 +23441,7 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
 
 
 /***/ },
-/* 230 */
+/* 231 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23499,7 +23500,7 @@ module.exports = invariant;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 231 */
+/* 232 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23584,7 +23585,7 @@ Provider.childContextTypes = {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 232 */
+/* 233 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23602,11 +23603,11 @@ var _storeShape = __webpack_require__(219);
 
 var _storeShape2 = _interopRequireDefault(_storeShape);
 
-var _shallowEqual = __webpack_require__(233);
+var _shallowEqual = __webpack_require__(234);
 
 var _shallowEqual2 = _interopRequireDefault(_shallowEqual);
 
-var _wrapActionCreators = __webpack_require__(234);
+var _wrapActionCreators = __webpack_require__(235);
 
 var _wrapActionCreators2 = _interopRequireDefault(_wrapActionCreators);
 
@@ -23614,15 +23615,15 @@ var _warning = __webpack_require__(220);
 
 var _warning2 = _interopRequireDefault(_warning);
 
-var _isPlainObject = __webpack_require__(243);
+var _isPlainObject = __webpack_require__(244);
 
 var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 
-var _hoistNonReactStatics = __webpack_require__(229);
+var _hoistNonReactStatics = __webpack_require__(230);
 
 var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
 
-var _invariant = __webpack_require__(230);
+var _invariant = __webpack_require__(231);
 
 var _invariant2 = _interopRequireDefault(_invariant);
 
@@ -23986,7 +23987,7 @@ function connect(mapStateToProps, mapDispatchToProps, mergeProps) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ },
-/* 233 */
+/* 234 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24018,7 +24019,7 @@ function shallowEqual(objA, objB) {
 }
 
 /***/ },
-/* 234 */
+/* 235 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24036,12 +24037,12 @@ function wrapActionCreators(actionCreators) {
 }
 
 /***/ },
-/* 235 */
+/* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
 var Symbol = __webpack_require__(221),
-    getRawTag = __webpack_require__(238),
-    objectToString = __webpack_require__(239);
+    getRawTag = __webpack_require__(239),
+    objectToString = __webpack_require__(240);
 
 /** `Object#toString` result references. */
 var nullTag = '[object Null]',
@@ -24070,7 +24071,7 @@ module.exports = baseGetTag;
 
 
 /***/ },
-/* 236 */
+/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/** Detect free variable `global` from Node.js. */
@@ -24081,10 +24082,10 @@ module.exports = freeGlobal;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(30)))
 
 /***/ },
-/* 237 */
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
-var overArg = __webpack_require__(240);
+var overArg = __webpack_require__(241);
 
 /** Built-in value references. */
 var getPrototype = overArg(Object.getPrototypeOf, Object);
@@ -24093,7 +24094,7 @@ module.exports = getPrototype;
 
 
 /***/ },
-/* 238 */
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
 var Symbol = __webpack_require__(221);
@@ -24145,7 +24146,7 @@ module.exports = getRawTag;
 
 
 /***/ },
-/* 239 */
+/* 240 */
 /***/ function(module, exports) {
 
 /** Used for built-in method references. */
@@ -24173,7 +24174,7 @@ module.exports = objectToString;
 
 
 /***/ },
-/* 240 */
+/* 241 */
 /***/ function(module, exports) {
 
 /**
@@ -24194,10 +24195,10 @@ module.exports = overArg;
 
 
 /***/ },
-/* 241 */
+/* 242 */
 /***/ function(module, exports, __webpack_require__) {
 
-var freeGlobal = __webpack_require__(236);
+var freeGlobal = __webpack_require__(237);
 
 /** Detect free variable `self`. */
 var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
@@ -24209,7 +24210,7 @@ module.exports = root;
 
 
 /***/ },
-/* 242 */
+/* 243 */
 /***/ function(module, exports) {
 
 /**
@@ -24244,12 +24245,12 @@ module.exports = isObjectLike;
 
 
 /***/ },
-/* 243 */
+/* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(235),
-    getPrototype = __webpack_require__(237),
-    isObjectLike = __webpack_require__(242);
+var baseGetTag = __webpack_require__(236),
+    getPrototype = __webpack_require__(238),
+    isObjectLike = __webpack_require__(243);
 
 /** `Object#toString` result references. */
 var objectTag = '[object Object]';
@@ -24312,7 +24313,6 @@ module.exports = isPlainObject;
 
 
 /***/ },
-/* 244 */,
 /* 245 */,
 /* 246 */,
 /* 247 */,
@@ -24326,7 +24326,8 @@ module.exports = isPlainObject;
 /* 255 */,
 /* 256 */,
 /* 257 */,
-/* 258 */
+/* 258 */,
+/* 259 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24363,7 +24364,6 @@ _reactDom2.default.render(_react2.default.createElement(
 ), document.getElementsByTagName('body')[0]);
 
 /***/ },
-/* 259 */,
 /* 260 */,
 /* 261 */,
 /* 262 */,
@@ -24416,7 +24416,7 @@ _reactDom2.default.render(_react2.default.createElement(
 /* 309 */
 /***/ function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(258);
+module.exports = __webpack_require__(259);
 
 
 /***/ }

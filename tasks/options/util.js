@@ -74,7 +74,7 @@ const output = (params) => {
     return {
         path: BUILDPATH,
         filename: '[name].js',
-        library: 'w567675', // string,
+        library: 'overwatch', // string,
         libraryTarget: 'umd',
     };
 }

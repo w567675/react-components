@@ -1,3 +1,4 @@
+import './b';
 class Student {
     fullName: string;
     constructor(public firstName, public middleInitial, public lastName) {
@@ -263,3 +264,187 @@ let deck: Deck = {
         }
     }
 }
+let cardPicker = deck.createCardPicker();
+
+
+let suits = ["hearts", "spades", "clubs", "diamonds"];
+
+function pickCard(x: {suit: string; card: number; }[]): number;
+function pickCard(x: number): {suit: string; card: number; };
+
+function pickCard(x): any {
+    
+}
+pickCard([]);
+
+function ide<T>(arg: T): T {
+    return arg;
+}
+ide('string');
+
+const logide = <T>(arg: T[]): T[] => {
+    console.log(arg.length);
+    return arg;
+}
+logide(['1'])
+
+
+let myide: <T>(arg: T) => T;
+let myide2 : {<T>(arg: T): T}
+
+interface Generic<T> {
+    (arg:T): T;
+}
+let myide3: Generic<number>;
+
+class GenericNumberLimit {
+    length: number;
+}
+
+function GenericNumber<T extends GenericNumberLimit>(args: T): T {
+    if(args.length) {
+
+    }
+    return args;
+}
+
+
+function copyFields<T extends U, U>(target: T, source: U): T {
+    return target;
+}
+const x = {a: 1, b: 1};
+copyFields(x, {a: 1});
+
+
+class BeeKeeper {
+    hasMask: boolean;
+}
+
+class ZooKeeper {
+    nametag: string;
+}
+
+class Animall {
+    numLegs: number;
+}
+
+class Bee extends Animall {
+    keeper: BeeKeeper;
+}
+
+class Lion extends Animall {
+    keeper: ZooKeeper;
+}
+
+function findKeeper<A extends Animall, K> (a: { new(): A;
+    prototype: {keeper: K} }): K {
+    return a.prototype.keeper;
+}
+findKeeper(Lion);
+
+function create<T>(c: {new(): T; }): T {
+    return new c();
+}
+
+enum Direction {
+    Up = 1,
+    Down,
+    Left,
+    Right
+};
+
+declare enum Enum {
+    A = 1,
+    B,
+    C = 2
+}
+
+const enum Directions {
+    Up,
+    Down,
+    Left,
+    Right
+}
+
+let directions = [Directions.Up, Directions.Down, Directions.Left, Directions.Right]
+
+class Size {
+    private a;
+    feet: string;
+    constructor(name: string) {
+
+    }
+}
+class Size2 extends Size {
+    
+    feet: string;
+    constructor(name: string) {
+        super(name);
+    }
+}
+
+
+
+var s11111: Size ;
+var ssssssss1: Size2;
+
+interface Bird {
+    fly();
+    layEggs();
+}
+
+interface Fish {
+    swim();
+    layEggs();
+}
+
+function getSmallPet(): Fish | Bird {
+    return {
+        fly() {
+
+        },
+        swim() {
+
+        },
+        layEggs() {
+
+        }
+    } 
+    // ...
+}
+
+let pet = getSmallPet();
+pet.layEggs();
+
+
+const isFish = (pet: Bird | Fish): pet is Fish => {
+    return (pet as Fish).swim !== undefined;
+}
+
+if(isFish(pet)) {
+    pet.swim();
+}
+else {
+    pet.fly();
+}
+
+
+type Alias = { num: number };
+interface Interface {
+    num: number;
+}
+declare function aliased(arg: Alias): Alias;
+declare function interfaced(arg: Interface): Interface;
+
+
+interface Box {
+    width: number;
+    height: number;
+    a(): number;
+}
+interface Box {
+    scale: number;
+    a(): string; 
+}
+
+

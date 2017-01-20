@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["w567675"] = factory();
+		exports["overwatch"] = factory();
 	else
-		root["w567675"] = factory();
+		root["overwatch"] = factory();
 })(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -78,8 +78,29 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ({
 
+/***/ 229:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var b = (function () {
+    function b() {
+    }
+    b.prototype.say = function () {
+        alert('hello');
+    };
+    return b;
+}());
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = b;
+
+
+/***/ },
+
 /***/ 262:
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
 
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -94,6 +115,7 @@ var __assign = (this && this.__assign) || Object.assign || function(t) {
     }
     return t;
 };
+__webpack_require__(229);
 var Student = (function () {
     function Student(firstName, middleInitial, lastName) {
         this.firstName = firstName;
@@ -265,9 +287,105 @@ var Horse2 = (function () {
     };
     return Horse2;
 }());
-console.log(Horse2 === Animal3);
-var horse2 = Horse2;
-var ccccc = new horse2();
+var myAdd = function (x, y) {
+    return x + y;
+};
+var deck = {
+    suits: ['hearts', 'spades', 'clubs', 'diamonds'],
+    cards: Array(52),
+    createCardPicker: function () {
+        return function () {
+            return {
+                suit: '1',
+                card: 1,
+            };
+        };
+    }
+};
+var cardPicker = deck.createCardPicker();
+var suits = ["hearts", "spades", "clubs", "diamonds"];
+function pickCard(x) {
+}
+pickCard([]);
+function ide(arg) {
+    return arg;
+}
+ide('string');
+var logide = function (arg) {
+    console.log(arg.length);
+    return arg;
+};
+logide(['1']);
+var myide;
+var myide2;
+var myide3;
+var GenericNumberLimit = (function () {
+    function GenericNumberLimit() {
+    }
+    return GenericNumberLimit;
+}());
+function GenericNumber(args) {
+    if (args.length) {
+    }
+    return args;
+}
+function copyFields(target, source) {
+    return target;
+}
+var x = { a: 1, b: 1 };
+copyFields(x, { a: 1 });
+var BeeKeeper = (function () {
+    function BeeKeeper() {
+    }
+    return BeeKeeper;
+}());
+var ZooKeeper = (function () {
+    function ZooKeeper() {
+    }
+    return ZooKeeper;
+}());
+var Animall = (function () {
+    function Animall() {
+    }
+    return Animall;
+}());
+var Bee = (function (_super) {
+    __extends(Bee, _super);
+    function Bee() {
+        return _super.apply(this, arguments) || this;
+    }
+    return Bee;
+}(Animall));
+var Lion = (function (_super) {
+    __extends(Lion, _super);
+    function Lion() {
+        return _super.apply(this, arguments) || this;
+    }
+    return Lion;
+}(Animall));
+function findKeeper(a) {
+    return a.prototype.keeper;
+}
+findKeeper(Lion);
+function create(c) {
+    return new c();
+}
+var Direction;
+(function (Direction) {
+    Direction[Direction["Up"] = 1] = "Up";
+    Direction[Direction["Down"] = 2] = "Down";
+    Direction[Direction["Left"] = 3] = "Left";
+    Direction[Direction["Right"] = 4] = "Right";
+})(Direction || (Direction = {}));
+;
+var Directions;
+(function (Directions) {
+    Directions[Directions["Up"] = 0] = "Up";
+    Directions[Directions["Down"] = 1] = "Down";
+    Directions[Directions["Left"] = 2] = "Left";
+    Directions[Directions["Right"] = 3] = "Right";
+})(Directions || (Directions = {}));
+var directions = [0, 1, 2, 3];
 
 
 /***/ },
