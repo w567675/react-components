@@ -20,3 +20,5 @@ React入门(https://hulufei.gitbooks.io/react-tutorial/content/introduction.html
 Redux(http://cn.redux.js.org/index.html)
 
 Saga(http://leonshi.com/redux-saga-in-chinese/docs/introduction/BeginnerTutorial.html)
+
+Typescript(https://zhongsp.gitbooks.io/typescript-handbook/content/doc/handbook/tutorials/Migrating%20from%20JavaScript.html)
