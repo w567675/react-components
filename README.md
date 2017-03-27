@@ -21,4 +21,4 @@ Redux(http://cn.redux.js.org/index.html)
 
 Saga(http://leonshi.com/redux-saga-in-chinese/docs/introduction/BeginnerTutorial.html)
 
-Typescript(https://zhongsp.gitbooks.io/typescript-handbook/content/doc/handbook/tutorials/Migrating%20from%20JavaScript.html)
+Typescript(https://zhongsp.gitbooks.io/typescript-handbook/content/doc/handbook/tutorials/Migrating%20from%20JavaScript.html)(https://ts.xcatliu.com/)
